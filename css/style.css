@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.map-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+}
+
+path{
+    fill: #ECCEA7;
+    stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+path:hover{
+    fill: #FA9E27;
+}
+
+
+.card-info{
+    width: 500px;
+    height: 500px;
+    background: #F5E7D3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border: 2.5px solid #FA9E27;
+    }
+
+.card__header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 32px;
+    gap: 32px;
+}
+
+.content__title{
+    color: #FA9E27;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.header__title{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    font-weight: 900;
+    font-size: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid white;
+    background: #FA9E27;
+    color: white;
+}
+
+.capital__name::before{
+    content: 'CAPITAL: ';
+    font-weight: 900;
+}
+
+.regiao__name::before{
+    content: 'REGIÃO: ';
+    font-weight: 900;
+}
+
+.card__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+}
+
+.spanContent{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #FA9E27;
+}
+
+.cidades-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background: #ECCEA7 ;
+    height: 250px;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    display: grid;
+
+}
+
+.content__cidade{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

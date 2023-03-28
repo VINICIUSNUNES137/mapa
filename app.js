@@ -3,7 +3,7 @@
 const mapa = document.querySelector('#map')
 
 
-const getEstado =  async( {target} ) => { 
+const getEstado = async ({ target }) => {
     const estado = target.id.replace('BR-', '')
     // const nomeEstado = target.getAttribute('title')
     const dadosEstado = await preencherDados(estado)
@@ -12,7 +12,7 @@ const getEstado =  async( {target} ) => {
 }
 
 
-const preencherTela = async(dadosEstado) => {
+const preencherTela = async (dadosEstado) => {
 
     const headerCard = document.createElement('div')
     headerCard.classList.add('card__header')
@@ -55,7 +55,7 @@ const preencherTela = async(dadosEstado) => {
     const contentCidades = document.createElement('div')
     contentCidades.classList.add('cidades-content')
 
-    dadosEstado.cidades.forEach(function(cidade){
+    dadosEstado.cidades.forEach(function (cidade) {
         const cidadeContent = document.createElement('span')
         cidadeContent.classList.add('content__cidade')
         cidadeContent.textContent = cidade
@@ -72,14 +72,14 @@ const preencherTela = async(dadosEstado) => {
     //ADICIONANDO NA TELA
     const card = document.getElementById('card-info')
     card.replaceChildren(headerCard, contentCard)
-    
+
 
 }
 
 const preencherDados = async (sigla) => {
 
-    const url = `http://localhost:8080/v1/senai/cidades?uf=${sigla}`
-    const response =  await fetch(url)
+    const url = `https://api-mapa.onrender.com/v1/senai/cidades?uf=${sigla}`
+    const response = await fetch(url)
     const data = await response.json()
 
     return data

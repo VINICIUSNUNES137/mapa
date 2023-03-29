@@ -78,7 +78,8 @@ const preencherTela = async (dadosEstado) => {
 
 const preencherDados = async (sigla) => {
 
-    const url = `https://api-mapa.onrender.com/v1/senai/cidades?uf=${sigla}`
+    //const url = `https://api-mapa.onrender.com/v1/senai/cidades?uf=${sigla}`
+    const url = `https://api-mapa-production.up.railway.app/v1/senai/cidades?uf=${sigla}`
     const response = await fetch(url)
     const data = await response.json()
 
